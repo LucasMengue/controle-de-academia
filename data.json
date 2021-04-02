@@ -1,12 +1,13 @@
 {
   "instructors": [
     {
-      "avatar": "http://google.com",
-      "name": "sdfsdoi",
-      "birth": 1380326400000,
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "asasdh",
+      "birth": 1609372800000,
       "gender": "M",
       "services": "musculação, crossfit",
-      "created_at": 1617387263082
+      "created_at": 1617390590848
     }
   ]
 }
