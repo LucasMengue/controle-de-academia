@@ -1,5 +1,13 @@
 {
   "instructors": [
-    
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "asfdsdf",
+      "birth": 823910400000,
+      "gender": "M",
+      "services": "Musculação",
+      "created_at": 1617742866002
+    }
   ]
 }
