@@ -1,13 +1,5 @@
 {
   "instructors": [
-    {
-      "id": 1,
-      "avatar_url": "http://google.com",
-      "name": "asasdh",
-      "birth": 1609372800000,
-      "gender": "M",
-      "services": "musculação, crossfit",
-      "created_at": 1617390590848
-    }
+    
   ]
 }
