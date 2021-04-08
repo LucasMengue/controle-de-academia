@@ -17,14 +17,13 @@ exports.show = function (req, res) {
   const instructor = {
     ...foundInstructor,
     age: age(foundInstructor.birth),
-    gender: "",
     services: foundInstructor.services.split(","),
     created_at: new Intl.DateTimeFormat("pt-BR").format(
       foundInstructor.created_at
     ),
   };
 
-  return res.render("instructors/show", { instructor: foundInstructor });
+  return res.render("instructors/show", { instructor });
 };
 
 // create
