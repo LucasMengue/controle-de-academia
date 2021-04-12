@@ -1,6 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
-const { age } = require("./utils");
+const { age, date } = require("./utils");
 
 // show
 exports.show = function (req, res) {
@@ -75,7 +75,12 @@ exports.edit = function (req, res) {
     return res.send("Instructor not found!");
   }
 
-  return res.render("instructors/edit", { instructor: foundInstructor });
+  const instructor = {
+    ...foundInstructor,
+    birth: date(foundInstructor.birth),
+  };
+
+  return res.render("instructors/edit", { instructor });
 };
 
 // update
