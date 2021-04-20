@@ -3,9 +3,9 @@
   <section
     class="avatar"
     style="
-      background: url(https://source.unsplash.com/collection/3621148/500x500)
-        no-repeat center center / cover;
-    "
+                background: url({{ member.avatar_url }})
+                  no-repeat center center / cover;
+              "
   ></section>
   <section class="details">
     <form method="POST" action="/members?_method=PUT">
@@ -19,13 +19,10 @@
     </form>
   </section>
 </div>
-
 <script>
   const formDelete = document.querySelector("#form-delete");
-
   formDelete.addEventListener("submit", function (event) {
     const confirmation = confirm("Deseja deletar?");
-
     if (!confirmation) {
       event.preventDefault();
     }
