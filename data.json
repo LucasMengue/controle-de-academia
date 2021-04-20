@@ -1,5 +1,17 @@
 {
-  "members": [],
+  "members": [
+    {
+      "avatar_url": "https://source.unsplash.com/collection/3621148/500x500",
+      "name": "Lais",
+      "email": "lais@gmail.com",
+      "birth": 757296000000,
+      "gender": "F",
+      "blood": "A+",
+      "weight": "70",
+      "height": "165",
+      "id": 1
+    }
+  ],
   "instructors": [
     {
       "id": "1",
