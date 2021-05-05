@@ -1,4 +1,5 @@
 const { age, date } = require("../../lib/utils");
+const db = require("../../config/db");
 
 module.exports = {
   index(req, res) {
@@ -16,17 +17,32 @@ module.exports = {
       }
     }
 
-    let {
-      avatar_url,
-      name,
-      birth,
-      gender,
-      services,
-      created_at,
-      id,
-    } = req.body;
+    const query = `
+      INSERT INTO instructors (
+        name,
+        avatar_url,
+        gender,
+        services,
+        birth,
+        created_at
+      ) VALUES ($1, $2, $3, $4, $5, $6)
+      RETURNING id
+    `;
 
-    return;
+    const values = [
+      req.body.name,
+      req.body.avatar_url,
+      req.body.gender,
+      req.body.services,
+      date(req.body.birth).iso,
+      date(Date.now()).iso,
+    ];
+
+    db.query(query, values, function (err, results) {
+      if (err) return res.send("Database Error!");
+
+      return res.redirect(`/instructors/${results.rows[0].id}`);
+    });
   },
   show(req, res) {
     return;
